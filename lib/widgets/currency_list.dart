@@ -12,6 +12,7 @@ class CurrencyList extends StatefulWidget {
 
 class _CurrencyListState extends State<CurrencyList> {
   late Future<List<CurrencyModel>> _currencyListFuture;
+  int selected = -1;
 
   @override
   void initState() {
@@ -26,10 +27,7 @@ class _CurrencyListState extends State<CurrencyList> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           List<CurrencyModel> _myList = snapshot.data!;
-          return ListView.builder(
-              itemCount: _myList.length,
-              itemBuilder: (context, index) =>
-                  CurrencyListItem(currency: _myList[index]));
+          return CurrencyListItem(myList: _myList);
         } else if (snapshot.hasError) {
           return const Center(
             child: Text("Error Occuired"),

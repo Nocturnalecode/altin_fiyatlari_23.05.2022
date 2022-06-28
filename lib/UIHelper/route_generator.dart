@@ -1,7 +1,6 @@
-import 'package:altin_fiyatlari/pages/calculate_page.dart';
 import 'package:altin_fiyatlari/pages/foreign_currency_page.dart';
 import 'package:altin_fiyatlari/pages/gold_page.dart';
-import 'package:altin_fiyatlari/pages/settings_page.dart';
+import 'package:altin_fiyatlari/pages/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +32,7 @@ class RouteGenerator {
       case "/currency":
         return _createRoute(const ForeignCurrencyPage(), settings);
       case "/settings":
-        return _createRoute(const SettingsPage(), settings);
+        return _createRoute(const HomePage(), settings);
       default:
         return MaterialPageRoute(
             builder: (context) => Scaffold(

@@ -1,13 +1,20 @@
+// To parse this JSON data, do
+//
+//     final currencyModel = currencyModelFromJson(jsonString);
+
 class CurrencyModel {
   CurrencyModel({
-    required this.satis,
-    required this.alis,
-    required this.degisim,
+    required this.cur,
+    required this.buy,
     required this.type,
+    required this.sell,
+    required this.diff,
   });
 
-  String satis;
-  String alis;
-  String degisim;
-  String type;
+  final String cur;
+  final String buy;
+  final String type;
+  final String sell;
+  final String diff;
+
 }
